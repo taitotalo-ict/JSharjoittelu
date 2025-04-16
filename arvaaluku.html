@@ -17,6 +17,14 @@ Jos käyttäjä arvaa oikeasti oma numero, ilmoittaa myös onnittelut -viestill�
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arvaa luku</title>
     <script src="arvaaluku.js" defer></script>
+    <style>
+        .red {
+            color: red;
+        }
+        .blue {
+            color: blue;
+        }
+    </style>
 </head>
 <body>
     <input type="number" id="input">
@@ -24,7 +32,9 @@ Jos käyttäjä arvaa oikeasti oma numero, ilmoittaa myös onnittelut -viestill�
     <br>
     <button id="reset">Reset</button>
     <br>
-    <p id="viesti"></p>
-    <p id="arvaukset"></p>
+    <p id="viesti"></p><br>
+    <p id="arvaukset"></p><span class="red">1</span>, <span class="blue">99</span><br>
+    <p id="counter"></p>
+
 </body>
 </html>

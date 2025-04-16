@@ -3,6 +3,9 @@ const inputElem = document.getElementById('input');
 const messageElem = document.getElementById('viesti');
 const buttonElem = document.getElementById('painike');
 const arvauksetElem = document.getElementById('arvaukset');
+const counterElem = document.getElementById('counter');
+let counter = 0;
+
 
 document.getElementById('reset').addEventListener('click', () => {
     numero = Math.floor(Math.random()*100);
@@ -10,6 +13,8 @@ document.getElementById('reset').addEventListener('click', () => {
     inputElem.value = '';
     messageElem.textContent = '';
     arvauksetElem.textContent = '';
+    counterElem.textContent = 'Arvaus: 0';
+    counter = 0;
 });
 
 inputElem.addEventListener('keypress', (event) => {
@@ -31,6 +36,9 @@ buttonElem.addEventListener('click', () => {
         return
     }
     
+    counter++;
+    counterElem.textContent = 'Arvaus: ' + counter;
+
     let userNumber = Number(inputElem.value);
 
     if (userNumber > numero) {
