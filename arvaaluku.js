@@ -40,6 +40,7 @@ buttonElem.addEventListener('click', () => {
     counterElem.textContent = 'Arvaus: ' + counter;
 
     let userNumber = Number(inputElem.value);
+    inputElem.value = '';
 
     if (userNumber > numero) {
         messageElem.textContent = 'Liian iso';
@@ -47,11 +48,16 @@ buttonElem.addEventListener('click', () => {
         messageElem.textContent = 'Liian pieni';
     } else {
         messageElem.textContent = 'Kyllä tuo oli se numero.';
+        arvauksetElem.textContent = '';
+        counterElem.textContent = '';
+        return
     }
 
+    let elem = `<span class="${userNumber>numero?'red':'blue'}">${userNumber}</span>`;
+
     if (arvauksetElem.textContent == '') {
-        arvauksetElem.textContent = userNumber;
+        arvauksetElem.innerHTML = elem;
     } else {
-        arvauksetElem.textContent += ', ' + userNumber;
+        arvauksetElem.innerHTML += ', ' + elem;
     }
 });
