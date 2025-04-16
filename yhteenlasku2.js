@@ -37,7 +37,12 @@ document.getElementById('summa').addEventListener('click', () => {
         summa += Number(inputElement.value)
     }
 
-    
+    // Solution 6
+    summa = 0;
+    luvutLista.forEach((inputElement) => {
+        summa += Number(inputElement.value)
+    });
+
 
     tulosElem.textContent = summa;
 });
