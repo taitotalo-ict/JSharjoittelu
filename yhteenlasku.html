@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yhteenlasku</title>
+    <style>
+       p#tulos {
+        border: 1px solid black;
+       }
+       .virhe {
+        outline: solid 1px red;
+       }
+    </style>
+    <script src="yhteenlasku.js" defer></script>
+</head>
+<body>
+    <input type="number" id="luku1">
+    <input type="number" id="luku2">
+    <button id="summa" disabled>Laske summa</button>
+    <button id="erotus" disabled>Laske erotus</button>
+    <button id="tulo" disabled>Laske tulo</button>
+    <br>
+    <p id="tulos"></p>
+</body>
+</html>
