@@ -28,9 +28,16 @@ document.getElementById('summa').addEventListener('click', () => {
     // Solution 4
     summa = 0;
     for (index in luvutLista) {
-        summa += Number(luvutElem[index].value);
+        summa += Number(luvutLista[index].value);
     }
 
+    // Solution 5
+    summa = 0;
+    for ([index, inputElement] of luvutLista.entries()) {
+        summa += Number(inputElement.value)
+    }
+
+    
 
     tulosElem.textContent = summa;
 });
