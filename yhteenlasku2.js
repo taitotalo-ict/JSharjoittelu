@@ -19,8 +19,8 @@ document.getElementById('summa').addEventListener('click', () => {
     
     // Solution 3
     summa = 0;
-    for (element of luvutElem) {
-        summa += Number(element.value)
+    for (inputElement of luvutElem) {
+        summa += Number(inputElement.value)
     }
     
     let luvutLista = Array.from(luvutElem);
