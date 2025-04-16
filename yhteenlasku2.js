@@ -1,5 +1,7 @@
 const luvutElem = document.getElementsByClassName('luku');
+//const luvutElem = document.querySelectorAll('.luku');
 const tulosElem = document.getElementById('tulos');
+//const tulosElem = document.querySelector('#tulos');
 
 document.getElementById('summa').addEventListener('click', () => {
     // Solution 1
@@ -19,7 +21,15 @@ document.getElementById('summa').addEventListener('click', () => {
     summa = 0;
     for (element of luvutElem) {
         summa += Number(element.value)
-    }    
+    }
+    
+    let luvutLista = Array.from(luvutElem);
+
+    // Solution 4
+    summa = 0;
+    for (index in luvutLista) {
+        summa += Number(luvutElem[index].value);
+    }
 
 
     tulosElem.textContent = summa;
